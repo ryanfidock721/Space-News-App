@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+</style>
 
 export function Body() {
     const [articles, setArticles] = useState([])
@@ -23,19 +26,27 @@ export function Body() {
       }
 
       getData();
+      console.log(Date);
       
     }, []);
 
     console.log(articles);
     return (
-      <div>
+      <div className='flex justify-center flex-col items-center'>
         {articles.map(article => (
-          <div key={article.id}>
-            <p>Title: {article.title}</p>
-            <p>Summary: {article.summary}</p>
-            <a href={article.url}>
-              <img src={article.image_url} alt={article.title} width="300" />
-            </a>
+          <div key={article.id} className='flex-auto w-full max-w-120 pt-10 pb-10 border-b border-slate-300 p-2'>
+            <div className='bg-zinc-800 hover:bg-gray-800 p-5 rounded-md shadow-md cursor-pointer'>
+              <a href={article.url}>
+                <div className='flex justify-center'>
+                    <img src={article.image_url} alt={article.title} className='rounded-md' />
+                </div>
+                <p className='font-bold text-2xl p-5'>{article.title}</p>
+                <div className='flex direction-row text-sm justify-around'>
+                  <p className='inline'>{article.news_site}</p>
+                  <p>{new Date(article.published_at).toLocaleDateString()}</p>
+                </div>
+              </a>
+            </div>
           </div>
             ))}
       </div>
