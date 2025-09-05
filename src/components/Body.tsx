@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 
-export function Body() {
+
+export function Body({userText}) {
     const [articles, setArticles] = useState([])
     
       useEffect(() => {
         async function getData() {
     
-        const url = "https://api.spaceflightnewsapi.net/v4/articles";
+        const url = `https://api.spaceflightnewsapi.net/v4/articles?title_contains=${userText}`;
+        console.log(url)
         try {
           const response = await fetch(url);
           if (!response.ok) {
@@ -25,7 +27,7 @@ export function Body() {
       getData();
       console.log(Date);
       
-    }, []);
+    }, [userText]);
 
     console.log(articles);
     return (
