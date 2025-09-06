@@ -3,6 +3,15 @@ import { useEffect } from 'react'
 
 
 export function Body({userText}) {
+    type Article ={
+      id: number;
+      title: string;
+      url: string;
+      image_url: string;
+      news_site: string;
+      published_at: string;
+    };
+
     const [articles, setArticles] = useState([])
     
       useEffect(() => {
@@ -33,8 +42,8 @@ export function Body({userText}) {
     return (
       <div className='flex justify-center flex-col items-center'>
         {articles.map(article => (
-          <div key={article.id} className='flex-auto w-full h-full max-h-200 max-w-120 pt-10 pb-10 border-b border-slate-300 p-2'>
-            <div className='bg-zinc-800/70 hover:bg-gray-800/70 p-5 rounded-md shadow-md cursor-pointer'>
+          <div key={article.id} className='flex-auto w-full h-full max-h-200 max-w-120 pt-10 p-2'>
+            <div className='bg-white/5 backdrop-blur-md shadow-lg p-5 rounded-md cursor-pointer transform transition-transform duration-300 hover:scale-105'>
               <a href={article.url}>
                 <div className='flex justify-center'>
                     <img src={article.image_url} alt={article.title} className='rounded-md max-h-80 max-w-auto' />
@@ -46,6 +55,7 @@ export function Body({userText}) {
                 </div>
               </a>
             </div>
+            <div className='border-b border-neutral-600 ml-2 mr-2 pt-10'></div>
           </div>
             ))}
       </div>
