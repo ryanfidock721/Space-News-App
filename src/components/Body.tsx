@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 
 
-export function Body({userText}) {
+export function Body({ userText }: { userText: string }) {
     type Article ={
       id: number;
       title: string;
@@ -12,7 +12,7 @@ export function Body({userText}) {
       published_at: string;
     };
 
-    const [articles, setArticles] = useState([])
+    const [articles, setArticles] = useState<Article[]>([]);
     
       useEffect(() => {
         async function getData() {
@@ -38,7 +38,6 @@ export function Body({userText}) {
       
     }, [userText]);
 
-    console.log(articles);
     return (
       <div className='flex justify-center flex-col items-center'>
         {articles.map(article => (

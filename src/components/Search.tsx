@@ -1,13 +1,12 @@
 import { useRef } from 'react'
 
-export function Search({setUserText}) {
-    const inputRef = useRef(null);
+export function Search({ setUserText }: { setUserText: (text: string) => void }) {
+    const inputRef = useRef<HTMLInputElement>(null);
 
     function searchPress() {
-        const input = inputRef.current.value;
+        const input = inputRef.current ? inputRef.current.value : "";
         console.log('Search Pressed')
         setUserText(input);
-        Body();
     }
 
     function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
