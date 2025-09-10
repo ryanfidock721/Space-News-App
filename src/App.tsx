@@ -11,6 +11,7 @@ function App() {
 
   return (
     <>
+      <title>Space News!</title>
       <Header />
       <Search setUserText={setUserText} />
       <Body userText={userText} />
