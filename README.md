@@ -1,69 +1,69 @@
-# React + TypeScript + Vite
+🚀 Space News App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application that fetches and displays the latest space-related news articles. Built with React and Tailwind CSS, and powered by the Spaceflight News API
+.
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fetches live news articles from the Spaceflight News API.
 
-## Expanding the ESLint configuration
+Responsive, mobile-first design built with Tailwind CSS.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Search and filter functionality for quick access to relevant articles.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Accessibility support with semantic HTML, ARIA attributes, and keyboard navigation.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Cross-browser tested for consistent performance.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🛠️ Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+React – UI components and state management
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Tailwind CSS – styling and responsive layout
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Spaceflight News API – external data source
+
+📸 Demo
+
+👉 Live Demo
+
+🚀 Getting Started
+Prerequisites
+
+Node.js (v14 or later recommended)
+
+npm or yarn
+
+Installation
+# Clone the repository
+git clone https://github.com/ryanfidock721/Space-News-App.git
+
+# Navigate into the project directory
+cd Space-News-App
+
+# Install dependencies
+npm install
+
+Run locally
+npm start
+
+
+App will run on http://localhost:3000
+.
+
+Build for production
+npm run build
+
+🔮 Future Improvements
+
+Add article bookmarking/favourites.
+
+Pagination or infinite scroll for longer news lists.
+
+Dark mode support.
+
+Unit tests with Jest/React Testing Library.
+
+📄 License
+
+This project is licensed under the MIT License.
