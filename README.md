@@ -26,16 +26,3 @@ Spaceflight News API – external data source
 
 LIVE Demo at: https://ryanfidock721.github.io/Space-News-App/
 
-# 🚀 Getting Started
-Prerequisites
-
-Node.js (v14 or later recommended)
-
-npm or yarn
-
-
-Unit tests with Jest/React Testing Library.
-
-📄 License
-
-This project is licensed under the MIT License.
